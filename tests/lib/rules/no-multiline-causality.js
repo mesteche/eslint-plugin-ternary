@@ -24,13 +24,16 @@ ruleTester.run("no-multiline-causality", rule, {
         { code: "someVar > 0 ? 'yeah' :\n 'no';" },
     ],
     invalid: [{
-        code: "(someVar >\n 0) ? 'yeah' : 'no';",
+        code: "(someVar >\n 0) ? 'yeah' : 'no'",
         errors: [{ message: 'Don\'t spread condition and consequent over multiple lines' }],
+        output: "(someVar>0)?'yeah': 'no'"
       },{
-        code: "(\nsomeVar > 0) ? 'yeah' : 'no';",
+        code: "(\nsomeVar > 0) ? 'yeah' : 'no'",
         errors: [{ message: 'Don\'t spread condition and consequent over multiple lines' }],
+        output: "(someVar>0)?'yeah': 'no'"
       },{
-        code: "(someVar > 0) ?\n 'yeah' : 'no';",
+        code: "(someVar >\n/* multiline\r\ncomment */ 0) ?// inline comment\n 'yeah' : 'no'",
         errors: [{ message: 'Don\'t spread condition and consequent over multiple lines' }],
+        output: "(someVar>/* multiline comment */0)?/* inline comment*/'yeah': 'no'"
       }],
 });
