@@ -58,7 +58,7 @@ Then configure the rules you want to use under the rules section.
 
 * Fill in provided rules here
 
-- [`@mesteche/neat-ternaries/align-causalities`](docs/rules/align-causalities.md)
+- [`@mesteche/neat-ternaries/align-cases`](docs/rules/align-cases.md)
 - [`@mesteche/neat-ternaries/align-outcomes`](docs/rules/align-outcomes.md)
 - [`@mesteche/neat-ternaries/one-line-per-case`](docs/rules/one-line-per-case.md)
 - [`@mesteche/neat-ternaries/no-nested-ternary`](docs/rules/no-nested-ternary.md)
