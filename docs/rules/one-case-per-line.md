@@ -1,4 +1,4 @@
-# report when a pair of test + consequent are spread accross multiple lines (no-multiline-causality)
+# keep each pair of test + consequent on a separate line (one-case-per-line)
 
 Please describe the origin of the rule here.
 

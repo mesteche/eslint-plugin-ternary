@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/align-cusalities"),
+var rule = require("../../../lib/rules/align-cases"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -18,7 +18,7 @@ var rule = require("../../../lib/rules/align-cusalities"),
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("align-cusalities", rule, {
+ruleTester.run("align-cases", rule, {
     valid:   [
         { code: "test1 ? consequent1 :\n test2 ? consequent2 :\n 'default'" },
         { code: "test1 ? consequent1 :// endline comment\n test2 ? consequent2 :/* another comment*/\n 'default'" },

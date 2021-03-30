@@ -60,6 +60,6 @@ Then configure the rules you want to use under the rules section.
 
 - [`@mesteche/neat-ternaries/align-causalities`](docs/rules/align-causalities.md)
 - [`@mesteche/neat-ternaries/align-outcomes`](docs/rules/align-outcomes.md)
-- [`@mesteche/neat-ternaries/no-multiline-causality`](docs/rules/no-multiline-causality.md)
+- [`@mesteche/neat-ternaries/one-line-per-case`](docs/rules/one-line-per-case.md)
 - [`@mesteche/neat-ternaries/no-nested-ternary`](docs/rules/no-nested-ternary.md)
-- [`@mesteche/neat-ternaries/no-shared-line-causality`](docs/rules/no-shared-line-causality.md)
+- [`@mesteche/neat-ternaries/one-case-per-line`](docs/rules/one-case-per-line.md)

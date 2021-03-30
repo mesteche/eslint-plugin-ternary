@@ -1,4 +1,4 @@
-# align tests together in chained ternaries (align-cusalities)
+# align tests together in chained ternaries (align-cases)
 
 Please describe the origin of the rule here.
 

@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/no-shared-line-causalities"),
+var rule = require("../../../lib/rules/one-case-per-line"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -18,7 +18,7 @@ var rule = require("../../../lib/rules/no-shared-line-causalities"),
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("no-shared-line-causalities", rule, {
+ruleTester.run("one-case-per-line", rule, {
     valid:   [
         { code: "test1 ? consequent1 :\n test2 ? consequent2 :\n 'default'" },
         { code: "test1 ? consequent1 :// endline comment\n test2 ? consequent2 :/* another comment*/\n 'default'" },

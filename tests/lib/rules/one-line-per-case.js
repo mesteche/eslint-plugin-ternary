@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/no-multiline-causality"),
+var rule = require("../../../lib/rules/one-line-per-case"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -18,7 +18,7 @@ var rule = require("../../../lib/rules/no-multiline-causality"),
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("no-multiline-causality", rule, {
+ruleTester.run("one-line-per-case", rule, {
     valid: [
         { code: "someVar > 0 ? 'yeah' : 'no';" },
         { code: "someVar > 0 ? 'yeah' :\n 'no';" },
