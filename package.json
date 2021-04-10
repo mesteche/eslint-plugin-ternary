@@ -1,6 +1,6 @@
 {
   "name": "@mesteche/eslint-plugin-neat-ternaries",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "format ternaries to optimize readability",
   "homepage": "https://github.com/mesteche/eslint-plugin-ternary",
   "repository": "https://github.com/mesteche/eslint-plugin-ternary",
