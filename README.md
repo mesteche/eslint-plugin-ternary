@@ -56,10 +56,8 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
-
 - [`@mesteche/neat-ternaries/align-cases`](docs/rules/align-cases.md)
 - [`@mesteche/neat-ternaries/align-outcomes`](docs/rules/align-outcomes.md)
-- [`@mesteche/neat-ternaries/one-line-per-case`](docs/rules/one-line-per-case.md)
 - [`@mesteche/neat-ternaries/no-nested-ternary`](docs/rules/no-nested-ternary.md)
+- [`@mesteche/neat-ternaries/one-line-per-case`](docs/rules/one-line-per-case.md)
 - [`@mesteche/neat-ternaries/one-case-per-line`](docs/rules/one-case-per-line.md)
