@@ -1,5 +1,7 @@
 # eslint-plugin-neat-ternaries
 
+[![npm](https://img.shields.io/npm/v/@mesteche/eslint-plugin-neat-ternaries?style=flat-square)](https://www.npmjs.com/package/@mesteche/eslint-plugin-neat-ternaries)
+
 format chained ternaries to optimize readability
 
 - Each line correspond to a case (condition/value pair)
