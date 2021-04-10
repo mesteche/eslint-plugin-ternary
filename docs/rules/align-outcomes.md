@@ -1,36 +1,25 @@
 # align the outcomes off every ternary in a chain (align-outcomes)
 
-Please describe the origin of the rule here.
+Aligning outcomes together in a chained ternary makes it easier to visually parse, and find the value you're interested in.
 
+This rule works best in cunjunction with the `align-cases` rule
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to make sure that the outcomes in a chained ternary are aligned with each other.
 
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+const result = longTest1 ? consequent1 :
+               test2 ? consequent2 :
+               'default'
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+const result = longTest1 ? consequent1 :
+               test2     ? consequent2 :
+                           'default'
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.

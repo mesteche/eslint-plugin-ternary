@@ -17,23 +17,38 @@ var rule = require("../../../lib/rules/one-line-per-case"),
 // Tests
 //------------------------------------------------------------------------------
 
-var ruleTester = new RuleTester();
+var ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2021 } });
 ruleTester.run("one-line-per-case", rule, {
-    valid: [
-        { code: "someVar > 0 ? 'yeah' : 'no';" },
-        { code: "someVar > 0 ? 'yeah' :\n 'no';" },
-    ],
-    invalid: [{
-        code: "(someVar >\n 0) ? 'yeah' : 'no'",
-        errors: [{ message: 'Don\'t spread condition and consequent over multiple lines' }],
-        output: "(someVar>0)?'yeah': 'no'"
-      },{
-        code: "(\nsomeVar > 0) ? 'yeah' : 'no'",
-        errors: [{ message: 'Don\'t spread condition and consequent over multiple lines' }],
-        output: "(someVar>0)?'yeah': 'no'"
-      },{
-        code: "(someVar >\n/* multiline\r\ncomment */ 0) ?// inline comment\n 'yeah' : 'no'",
-        errors: [{ message: 'Don\'t spread condition and consequent over multiple lines' }],
-        output: "(someVar>/* multiline comment */0)?/* inline comment*/'yeah': 'no'"
-      }],
+  valid: [{
+    code: `
+    someVar > 0 ? 'yeah' : 'no';`
+  }, {
+    code: `
+    someVar > 0 ? 'yeah' :
+    'no';`
+  }],
+  invalid: [{
+    code: `
+    (someVar >
+    0) ? 'yeah' : 'no'`,
+    errors: [{ message: 'Don\'t spread cases over multiple lines' }],
+    output: `
+    (someVar>0)?'yeah': 'no'`
+  },{
+    code: `
+    (
+      someVar > 0) ? 'yeah' : 'no'`,
+    errors: [{ message: 'Don\'t spread cases over multiple lines' }],
+    output: `
+    (someVar>0)?'yeah': 'no'`
+  },{
+    code: `
+    (someVar >
+      /* multiline
+      comment */ 0) ?// inline comment
+     'yeah' : 'no'`,
+    errors: [{ message: 'Don\'t spread cases over multiple lines' }],
+    output: `
+    (someVar>/* multiline       comment */0)?/* inline comment*/'yeah': 'no'`
+  }],
 });

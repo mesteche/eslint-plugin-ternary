@@ -17,7 +17,7 @@ var rule = require("../../../lib/rules/no-nested-ternary"),
 // Tests
 //------------------------------------------------------------------------------
 
-var ruleTester = new RuleTester();
+var ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2021 } });
 ruleTester.run("no-nested-ternary", rule, {
     valid: [{
         code: `

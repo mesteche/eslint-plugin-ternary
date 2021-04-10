@@ -27,11 +27,11 @@ ruleTester.run("align-outcomes", rule, {
       }],
       invalid: [{
         code: `
-        const result = test1plop ? consequent1 : 
+        const result = test1plop ? consequent1 :
         test2 ? consequent2 : 
         'default'`,
         output: `
-        const result = test1plop ? consequent1 : 
+        const result = test1plop ? consequent1 :
         test2 ? consequent2 : 
                                    'default'`,
         errors: [
@@ -40,12 +40,12 @@ ruleTester.run("align-outcomes", rule, {
         ],
       },{
         code: `
-        const result = test1plop ? consequent1 : 
-                       test2 ? consequent2 : 
+        const result = test1plop ? consequent1 :
+                       test2 ? consequent2 :
                        'default'`,
         output: `
-        const result = test1plop ? consequent1 : 
-                       test2     ? consequent2 : 
+        const result = test1plop ? consequent1 :
+                       test2     ? consequent2 :
                                    'default'`,
         errors: [
           { message: 'Align outcomes in chain' },

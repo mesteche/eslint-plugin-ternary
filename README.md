@@ -2,7 +2,7 @@
 
 format chained ternaries to optimize readability
 
-- Each line correspond to a condition/value pair
+- Each line correspond to a case (condition/value pair)
 - The chained ternary is formatted in two columns:
     - The left column is for conditions
     - The right column is for the matching values (including the default value)
